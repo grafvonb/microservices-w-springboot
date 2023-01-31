@@ -45,7 +45,7 @@ public class ProductCompositeIntegration implements ProductService, Recommendati
         this.objectMapper = objectMapper;
         this.productServiceUrl = "http://" + productServiceHost + ":" + productServicePort + "/product";
         this.recommendationServiceUrl = "http://" + recommendationServiceHost + ":" + recommendationServicePort + "/recommendation?productId=";
-        this.reviewServiceUrl = "http://" + reviewServiceHost + ":" + reviewServicePort + "/review?productId";
+        this.reviewServiceUrl = "http://" + reviewServiceHost + ":" + reviewServicePort + "/review?productId=";
     }
 
     @Override

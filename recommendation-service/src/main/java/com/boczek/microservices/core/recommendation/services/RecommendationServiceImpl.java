@@ -27,6 +27,8 @@ public class RecommendationServiceImpl implements RecommendationService {
     @Override
     public List<Recommendation> getRecommendations(int productId) {
 
+        LOG.debug("entering...");
+
         if (productId < 1) {
             throw new InvalidInputException("Invalid productId: " + productId);
         }
