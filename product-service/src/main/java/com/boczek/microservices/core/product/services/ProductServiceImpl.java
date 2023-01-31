@@ -1,4 +1,4 @@
-package com.boczek.microservices.core.product;
+package com.boczek.microservices.core.product.services;
 
 import com.boczek.microservices.api.core.product.Product;
 import com.boczek.microservices.api.core.product.ProductService;
