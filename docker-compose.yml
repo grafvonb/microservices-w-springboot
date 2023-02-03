@@ -1,0 +1,32 @@
+version: '2.1'
+
+services:
+  product:
+    build: product-service
+    image: product-service:2.0.0
+    mem_limit: 512m
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+
+  recommendation:
+    build: recommendation-service
+    image: recommendation-service:2.0.0
+    mem_limit: 512m
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+
+  review:
+    build: review-service
+    image: review-service:2.0.0
+    mem_limit: 512m
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+
+  product-composite:
+    build: product-composite-service
+    image: product-composite-service:2.0.0
+    mem_limit: 512m
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
