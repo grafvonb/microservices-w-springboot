@@ -1,6 +1,16 @@
-server.port: 7001
+server:
+  port: 7001
 
 logging:
   level:
     root: INFO
     com.com.boczek.microservices: DEBUG
+
+---
+spring:
+  config:
+    activate:
+      on-profile: docker
+
+server:
+  port: 8080
